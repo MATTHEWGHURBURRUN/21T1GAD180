@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Test Scenes/Ham/Scenes/testo1.unity
+    guid: 006f7ffc80d2767468603c95b8a6b016
+  - enabled: 1
+    path: Assets/Test Scenes/Ham/Scenes/testo2.unity
+    guid: 770895b77f4954d4cb58690cc7e2698c
   m_configObjects: {}
