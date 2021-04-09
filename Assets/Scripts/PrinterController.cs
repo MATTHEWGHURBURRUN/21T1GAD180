@@ -17,19 +17,21 @@ public class PrinterController : MonoBehaviour
         if (!isFixed)
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
+            GameObject printer = GameObject.FindGameObjectWithTag("Printer");
             if (player != null) 
             {
                 player.GetComponent<PlayerMovement>().movementFreedom = false;
                 player.transform.position = teleportLocation.position;
                 player.GetComponent<Animator>().Play("Punch Right");
-                StartCoroutine(WaitThreeSeconds(player));
+                StartCoroutine(WaitThreeSecondsPlayer(player));
+                StartCoroutine(WaitThreeSecondsPrinter(printer));
             }
             isFixed = true;
             Debug.Log("Printer is now fixed.");
         }
     }
 
-    IEnumerator WaitThreeSeconds(GameObject player)
+    IEnumerator WaitThreeSecondsPlayer(GameObject player)
     {
         print("Start waiting");
 
@@ -65,5 +67,17 @@ public class PrinterController : MonoBehaviour
                 isFixed = false;
             }
         }
+    }
+
+    IEnumerator WaitThreeSecondsPrinter(GameObject printer)
+    {
+        print("Start waiting");
+
+        yield return new WaitForSeconds(3);
+
+        print("3 seconds has passed");
+
+        printer.GetComponent<Animator>().Play("Fixed Printer");
+
     }
 }
