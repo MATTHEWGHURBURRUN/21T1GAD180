@@ -6,18 +6,9 @@ EditorUserSettings:
   serializedVersion: 4
   m_ConfigSettings:
     RecentlyUsedScenePath-0:
-      value: 22424703114646680e0b0227036c6c111b07142f1f2b233e2867083debf42d
+      value: 224247031146466f081d186223205a1e130457022d2569032e2c1336f1af203df1f339b8a92f31352d1b
       flags: 0
     RecentlyUsedScenePath-1:
-      value: 224247031146466f081d186223205a1e130457072d3c2e7f1e2a183de7f37b1fc3c367b1b7050b13145aa1290a371526
-      flags: 0
-    RecentlyUsedScenePath-2:
-      value: 224247031146466f081d186223205a1e130457072d3c2e7f1e2a183de7f37b1ff0e22fcbe822006e7717e1351027
-      flags: 0
-    RecentlyUsedScenePath-3:
-      value: 224247031146466f081d186223205a1e1304570923652920621a1e36ece52777cce221a9d4393a323c4cfa320d2a18
-      flags: 0
-    RecentlyUsedScenePath-4:
       value: 22424703114646680e0b0227036c78111b1258192f2d2835633c133af6f9
       flags: 0
     vcSharedLogLevel:
@@ -33,4 +24,4 @@ EditorUserSettings:
   m_VCProjectOverlayIcons: 1
   m_VCHierarchyOverlayIcons: 1
   m_VCOtherOverlayIcons: 1
-  m_VCAllowAsyncUpdate: 0
+  m_VCAllowAsyncUpdate: 1

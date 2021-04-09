@@ -34,7 +34,7 @@ public class uiScript : MonoBehaviour
                 Debug.Log("Time has run out!");
                 timeRemaining = 0;
                 timerIsRunning = false;
-                Application.LoadLevel("testo2");
+                timeText.text = "Time Out";
             }
         }
         if (Input.GetKeyDown(KeyCode.RightControl))
