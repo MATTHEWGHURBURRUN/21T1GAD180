@@ -7,6 +7,7 @@ public class PrinterController : MonoBehaviour
 {
     public bool isFixed;
     public Animator animator;
+    public Transform teleportLocation;
 
     public void FixPrinter() 
     {
@@ -16,6 +17,7 @@ public class PrinterController : MonoBehaviour
             if (player != null) 
             {
                 player.GetComponent<PlayerMovement>().movementFreedom = false;
+                player.transform.position = teleportLocation.position;
                 player.GetComponent<Animator>().Play("Punch Right");
                 StartCoroutine(WaitThreeSeconds(player));
             }
