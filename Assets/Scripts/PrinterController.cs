@@ -18,6 +18,7 @@ public class PrinterController : MonoBehaviour
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             GameObject printer = GameObject.FindGameObjectWithTag("Printer");
+            
             if (player != null) 
             {
                 player.GetComponent<PlayerMovement>().movementFreedom = false;
@@ -54,6 +55,7 @@ public class PrinterController : MonoBehaviour
     {
         if (timerRunning)
         {
+            GameObject printer = GameObject.FindGameObjectWithTag("Printer");
             if (resetTimer > 0)
             {
                 resetTimer -= Time.deltaTime;
@@ -65,6 +67,7 @@ public class PrinterController : MonoBehaviour
                 resetTimer = 0;
                 timerRunning = false;
                 isFixed = false;
+                printer.GetComponent<Animator>().Play("Broken Printer");
             }
         }
     }
