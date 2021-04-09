@@ -9,7 +9,9 @@ public class PlayerMovement : MonoBehaviour
 	public Rigidbody2D rb;
 
 	public Animator animator;
-	
+
+	public bool movementFreedom = true;
+
 	Vector2 movement;
 
     // Update is called once per frame
@@ -26,9 +28,10 @@ public class PlayerMovement : MonoBehaviour
 	
 	void FixedUpdate()
 	{
-		
-		rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
-		
+		if (movementFreedom == true) 
+		{
+			rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+		}
 	}
 	
 	
