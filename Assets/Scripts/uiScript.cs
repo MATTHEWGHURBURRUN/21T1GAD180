@@ -10,7 +10,7 @@ public class uiScript : MonoBehaviour
     public bool timerIsRunning = false;
     public Text timeText;
     public Text doodScore;
-    private int punches;
+    public int punches;
 
     private void Start()
     {
@@ -37,12 +37,11 @@ public class uiScript : MonoBehaviour
                 timeText.text = "Time Out";
             }
         }
-        if (Input.GetKeyDown(KeyCode.RightControl))
-        {
-            punches++;
+      
+      
 
-            doodScore.text = "Objects Punched: " + punches.ToString();
-        }
+       doodScore.text = "Objects Punched: " + punches.ToString();
+        
     }
 
     void DisplayTime(float timeToDisplay)

@@ -8,6 +8,9 @@ public class PrinterController : MonoBehaviour
     public bool isFixed;
     public Animator animator;
     public Transform teleportLocation;
+    public GameObject eventObject;
+    public float resetTimer;
+    public bool timerRunning = false;
 
     public void FixPrinter() 
     {
@@ -35,5 +38,32 @@ public class PrinterController : MonoBehaviour
         player.GetComponent<PlayerMovement>().movementFreedom = true;
 
         print("3 seconds has passed");
+
+        eventObject = GameObject.FindGameObjectWithTag("uiTag");
+
+        eventObject.GetComponent<uiScript>().punches += 1;
+
+        resetTimer = Random.Range(4, 10);
+
+        timerRunning = true;
+    }
+
+    void Update()
+    {
+        if (timerRunning)
+        {
+            if (resetTimer > 0)
+            {
+                resetTimer -= Time.deltaTime;
+               
+            }
+            else
+            {
+                Debug.Log("Printer Broke");
+                resetTimer = 0;
+                timerRunning = false;
+                isFixed = false;
+            }
+        }
     }
 }

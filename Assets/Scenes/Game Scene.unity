@@ -1094,7 +1094,7 @@ GameObject:
   - component: {fileID: 774175494}
   m_Layer: 0
   m_Name: EventSystem
-  m_TagString: Untagged
+  m_TagString: uiTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1111,11 +1111,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a74067337951f0045adbee383c277d75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 30
-  timerIsRunning: 0
-  timeText: {fileID: 542884849}
-  doodScore: {fileID: 1602157386}
-  punches: 0
 --- !u!114 &774175491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1180,6 +1175,7 @@ MonoBehaviour:
   timerIsRunning: 0
   timeText: {fileID: 542884849}
   doodScore: {fileID: 1602157386}
+  punches: 0
 --- !u!1 &838769490
 GameObject:
   m_ObjectHideFlags: 0
@@ -2722,6 +2718,9 @@ MonoBehaviour:
   isFixed: 0
   animator: {fileID: 0}
   teleportLocation: {fileID: 278149339}
+  eventObject: {fileID: 0}
+  resetTimer: 0
+  timerRunning: 0
 --- !u!1 &1863782782
 GameObject:
   m_ObjectHideFlags: 0
