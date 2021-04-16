@@ -45,7 +45,7 @@ public class WaterCoolerController : MonoBehaviour
 
         eventObject.GetComponent<uiScript>().punches += 1;
 
-        resetTimer = Random.Range(4, 10);
+        resetTimer = Random.Range(3, 20);
 
         timerRunning = true;
     }

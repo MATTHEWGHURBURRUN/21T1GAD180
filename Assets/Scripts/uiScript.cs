@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class uiScript : MonoBehaviour
 {
     
-    public float timeRemaining = 30;
+    public float timeRemaining = 60;
     public bool timerIsRunning = false;
     public Text timeText;
     public Text doodScore;

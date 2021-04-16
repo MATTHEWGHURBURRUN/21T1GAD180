@@ -7,6 +7,8 @@ TagManager:
   - uiTag
   - Printer
   - WaterCooler
+  - Phone
+  - Phone 2
   layers:
   - Default
   - TransparentFX

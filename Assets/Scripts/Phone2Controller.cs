@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
-public class PrinterController : MonoBehaviour
+public class Phone2Controller : MonoBehaviour
 {
     public bool isFixed;
     public Animator animator;
@@ -12,23 +11,23 @@ public class PrinterController : MonoBehaviour
     public float resetTimer;
     public bool timerRunning = false;
 
-    public void FixPrinter() 
+    public void FixPhone2()
     {
         if (!isFixed)
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
-            GameObject printer = GameObject.FindGameObjectWithTag("Printer");
-            
-            if (player != null) 
+            GameObject phone2 = GameObject.FindGameObjectWithTag("Phone 2");
+
+            if (player != null)
             {
                 player.GetComponent<PlayerMovement>().movementFreedom = false;
                 player.transform.position = teleportLocation.position;
                 player.GetComponent<Animator>().Play("Punch Right");
                 StartCoroutine(WaitThreeSecondsPlayer(player));
-                StartCoroutine(WaitThreeSecondsPrinter(printer));
+                StartCoroutine(WaitThreeSecondsPhone(phone2));
             }
             isFixed = true;
-            Debug.Log("Printer is now fixed.");
+            Debug.Log("Phone 2 is now fixed.");
         }
     }
 
@@ -46,7 +45,7 @@ public class PrinterController : MonoBehaviour
 
         eventObject.GetComponent<uiScript>().punches += 1;
 
-        resetTimer = Random.Range(8, 15);
+        resetTimer = Random.Range(1, 30);
 
         timerRunning = true;
     }
@@ -55,24 +54,24 @@ public class PrinterController : MonoBehaviour
     {
         if (timerRunning)
         {
-            GameObject printer = GameObject.FindGameObjectWithTag("Printer");
+            GameObject phone2 = GameObject.FindGameObjectWithTag("Phone 2");
             if (resetTimer > 0)
             {
                 resetTimer -= Time.deltaTime;
-               
+
             }
             else
             {
-                Debug.Log("Printer Broke");
+                Debug.Log("Phone 2 Broke");
                 resetTimer = 0;
                 timerRunning = false;
                 isFixed = false;
-                printer.GetComponent<Animator>().Play("Broken Printer");
+                phone2.GetComponent<Animator>().Play("Broken Phone");
             }
         }
     }
 
-    IEnumerator WaitThreeSecondsPrinter(GameObject printer)
+    IEnumerator WaitThreeSecondsPhone(GameObject phone)
     {
         print("Start waiting");
 
@@ -80,7 +79,7 @@ public class PrinterController : MonoBehaviour
 
         print("3 seconds has passed");
 
-        printer.GetComponent<Animator>().Play("Fixed Printer");
+        phone.GetComponent<Animator>().Play("Fixed Phone");
 
     }
 }
