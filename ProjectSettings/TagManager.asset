@@ -9,6 +9,7 @@ TagManager:
   - WaterCooler
   - Phone
   - Phone 2
+  - VendingMachine
   layers:
   - Default
   - TransparentFX
