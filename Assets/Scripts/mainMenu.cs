@@ -20,7 +20,7 @@ public class mainMenu : MonoBehaviour
           if (Input.GetKeyDown(KeyCode.Return))
           {
 				explosionSound.Play();
-                Application.LoadLevel("Game Scene");
+                Application.LoadLevel("tutorialScene");
 
           }
         
