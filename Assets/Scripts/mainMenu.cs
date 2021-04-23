@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class mainMenu : MonoBehaviour
 {
+	public AudioSource explosionSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +19,7 @@ public class mainMenu : MonoBehaviour
             //Press the Return/Enter key in order to load the level "testo2" from the built levels in the build settings.
           if (Input.GetKeyDown(KeyCode.Return))
           {
-
+				explosionSound.Play();
                 Application.LoadLevel("Game Scene");
 
           }
