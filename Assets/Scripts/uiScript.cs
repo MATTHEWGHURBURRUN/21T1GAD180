@@ -45,11 +45,12 @@ public class uiScript : MonoBehaviour
             }
         }
 
-        if (timeRemaining = 0) 
+        if (timeRemaining == 0) 
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             player.GetComponent<PlayerMovement>().movementFreedom = false;
         }
+
 
         // Get the int and update the UI in the top left.
         doodScore.text = "Objects Punched: " + punches.ToString();
