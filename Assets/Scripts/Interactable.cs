@@ -15,7 +15,7 @@ public class Interactable : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+    // Allow the player to use the interact key when they are in range
     void Update()
     {
         if (isInRange)
@@ -27,6 +27,7 @@ public class Interactable : MonoBehaviour
         }
     }
 
+    //If the player enters the 2D collider, set the isInRange function to true and communicate that to the consosle
     private void OnTriggerEnter2D(Collider2D collision) 
     {
         if (collision.gameObject.CompareTag("Player")) 
@@ -36,6 +37,7 @@ public class Interactable : MonoBehaviour
         }
     }
 
+    //If the player leaves the 2D collider, set the isInRange function to false and communicate that to the consosle
     private void OnTriggerExit2D(Collider2D collision) 
     {
         if (collision.gameObject.CompareTag("Player"))
