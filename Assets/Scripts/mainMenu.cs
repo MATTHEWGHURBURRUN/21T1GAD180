@@ -16,7 +16,7 @@ public class mainMenu : MonoBehaviour
     {
         
         
-            //Press the Return/Enter key in order to load the level "testo2" from the built levels in the build settings.
+            //Press the Return/Enter key in order to load the level "tutorialScene" from the built levels in the build settings.
           if (Input.GetKeyDown(KeyCode.Return))
           {
 				explosionSound.Play();
