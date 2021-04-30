@@ -16,6 +16,7 @@ public class PrinterController : MonoBehaviour
     {
         if (!isFixed)
         {
+            // Find the player and Phone within the context of the game
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             GameObject printer = GameObject.FindGameObjectWithTag("Printer");
             
